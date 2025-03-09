@@ -1,17 +1,22 @@
+To create a simple HTML file that opens a new Chrome tab with the link to YouTube, you can use the following code:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Link in New Tab</title>
+    <title>Redirect to YouTube</title>
     <script>
-        function openLink() {
-            window.open('https://venoxexec.github.io/Script.github.io', '_blank');
+        function openYouTube() {
+            window.open("https://www.youtube.com", "_blank");
         }
     </script>
 </head>
-<body>
-    <h1>Open Link in New Tab</h1>
-    <button onclick="openLink()">Click to Open Link</button>
+<body onload="openYouTube()">
+    <h1>Redirecting to YouTube...</h1>
 </body>
 </html>
+```
+
+This code will automatically open a new tab with the YouTube link when the webpage loads. You can save this code in a file named `redirect.html` and place it in your repository.

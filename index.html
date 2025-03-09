@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roblox Script Hub</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.36.1/min/vs/loader.min.js"></script>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="moon"></div>
+  
+  <div class="content-wrapper">
+    <div class="container">
+      <div class="search-container">
+        <i class='bx bx-search'></i>
+        <input type="text" id="searchInput" placeholder="Search scripts...">
+      </div>
+
+      <div class="scripts-container" id="scriptsContainer">
+        <!-- Scripts will be dynamically added here -->
+      </div>
+
+      <button class="add-script-btn" onclick="toggleAddScriptModal()">
+        <i class='bx bx-plus'></i>
+        Add New Script
+      </button>
+    </div>
+  </div>
+
+  <!-- Add Script Modal -->
+  <div class="modal" id="addScriptModal">
+    <div class="modal-content">
+      <h2>Add New Script</h2>
+      <input type="text" id="scriptName" placeholder="Script Name" required>
+      <input type="text" id="scriptDescription" placeholder="Script Description" required>
+      <input type="text" id="scriptImageUrl" placeholder="Image URL (optional)">
+      <div id="editor-container" style="height: 300px; border-radius: 8px; overflow: hidden; margin: 10px 0;"></div>
+      <div class="modal-buttons">
+        <button onclick="addNewScript()">Add Script</button>
+        <button onclick="toggleAddScriptModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
